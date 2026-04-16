@@ -216,7 +216,7 @@ export default function Home() {
       setTimeout(() => {
         setPreviewIndex((i) => (i + 1) % TOTAL_CARDS);
         setPreviewVisible(true);
-      }, 400);
+      }, 700);
     }, 3000);
     return () => clearInterval(interval);
   }, [gameStarted]);
@@ -336,7 +336,7 @@ export default function Home() {
           </button>
         </div>
         <div className="flex items-center justify-center px-8 py-12 lg:px-12 lg:w-[55%]">
-          <div className={`transition-opacity duration-300 ${previewVisible ? "opacity-100" : "opacity-0"}`}>
+          <div className={`transition-opacity duration-700 ${previewVisible ? "opacity-100" : "opacity-0"}`}>
             <PostCard card={CARDS[previewIndex]} liked={liked} onLike={() => setLiked((p) => !p)} />
           </div>
         </div>
